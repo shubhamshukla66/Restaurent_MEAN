@@ -2,12 +2,18 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema
 
 const menuitemsSchema = new schema(
-    {
-        menu_items:{
-            type:String
-        },
+  {
+    name: {
+      type: String
+    },
+    price_small: {
+      type: String,
+    },
+    price_large: {
+      type: String
+    }
   }
-,
+  ,
   { timestamps: true }
 )
 

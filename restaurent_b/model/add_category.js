@@ -3,14 +3,14 @@ const schema = mongoose.Schema
 
 const categorySchema = new schema(
     {
-        Thali_Items:{
+        thali_items:{
             type:String,
             require:true,
         },
-        Mini_Meals:{
+        mini_meals:{
             type:String
         },
-        Snacks:{
+        snacks:{
           type:String
         },
         menu_items:[{
