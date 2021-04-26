@@ -1,9 +1,6 @@
 const User = require("../model/user_signin")
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-//const otp = require("../../otp")
-//var otpGenerator = require('otp-generator')
-const _ = require('lodash')
 
 async function hashPassword(password) {
     return await bcrypt.hash(password, 10)
@@ -15,7 +12,6 @@ async function validatePassword(plainPassword, hashedPassword) {
 
 exports.user_signup = async (req, res) => {
 
-    //const OTP = otpGenerator.generate(44, { digits: true, upperCase: false, specialChars: false, alphabets: false });
     console.log(req.body)
     const { user_name, email, mobile_number, password } = req.body;
     const hashedPassword = await hashPassword(password)
